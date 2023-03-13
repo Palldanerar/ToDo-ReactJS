@@ -1,0 +1,28 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.inputTask {
+    width: 400px;
+    height: auto;
+    border-radius: 7px;
+    border: none;
+    outline: none;
+    padding: 5px 15px;
+}
+
+.btn {
+    background: #6633FF;
+    color: white;
+    padding: 7px 10px;
+    border-radius: 7px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    transition: all .3s ease;
+}
+
+.btn:hover {
+    background: #330099;
+}

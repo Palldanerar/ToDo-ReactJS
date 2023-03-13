@@ -9,6 +9,7 @@ function App() {
   const [task, setTask] = React.useState("")
 
   const newTask = () => {
+    if (!task) return
     setTasks(prev => [...tasks, {id: `${prev.length + 1}`, title: task}])
     setTask("")
   }
