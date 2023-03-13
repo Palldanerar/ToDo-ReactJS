@@ -1,6 +1,7 @@
 import React from 'react';
 import './App.css';
-import Task from './Task';
+import Task from './components/Task/Task';
+import Header from './components/Header/Header';
 
 function App() {
 
@@ -8,18 +9,16 @@ function App() {
   const [task, setTask] = React.useState("")
 
   const newTask = () => {
-    setTasks([...tasks, {title: task}])
+    setTasks(prev => [...tasks, {id: `${prev.length + 1}`, title: task}])
     setTask("")
   }
 
   return (
     <div className="App">
-      <input type="text" value={task} onChange={e => setTask(e.target.value)} />
-      <button onClick={newTask}>Новое Задание</button>
-
+      <Header task={task} setTask={setTask} newTask={newTask} />
       {
         tasks.map(task => {
-          return <Task tasks={task} />
+          return <Task key={task.id} tasks={task}/>
         })
       }
     </div>

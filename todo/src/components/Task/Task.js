@@ -1,9 +1,9 @@
 import React from 'react'
 
-function Task(props) {
+function Task({ tasks }) {
   return (
     <div>
-      <h1>{props.tasks.title}</h1> 
+      <h1>{tasks.title}</h1> 
     </div>
   )
 }
